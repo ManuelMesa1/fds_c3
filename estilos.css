@@ -12,6 +12,7 @@ body {
   font-weight: 300;
   margin: 0;
   padding-top: 40px;
+  background-color: #f3f3f5;
 }
 
 .header {
@@ -68,8 +69,14 @@ body {
 }
 
 /* REGISTER BUTTON */
-#btn-registrar{
-    border: hidden;
+#btn-registrar {
+  border: hidden;
+  background-color: #f3f3f5;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 /* MOBILE MENU */
@@ -224,21 +231,21 @@ body {
 
 /* CENTRAL PIECE RESPONSIVENESS */
 @media screen and (max-width: 1000px) {
-    .center_logo{
-        height: 680px;
-    }    
+  .center_logo {
+    height: 680px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .center_logo{
-        height: 650px;
-    }    
+  .center_logo {
+    height: 650px;
+  }
 }
 
 @media screen and (max-width: 750px) {
-    .center_logo{
-        height: 550px;
-    }    
+  .center_logo {
+    height: 550px;
+  }
 }
 
 /* FORM */
@@ -269,7 +276,8 @@ h1 {
 /**************************
   -------INPUT STYLING-------
   ***************************/
-input[type="text"], input[type="password"],
+input[type="text"],
+input[type="password"],
 textarea {
   display: block;
   outline: none;
@@ -284,7 +292,8 @@ textarea {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
 }
-input[type="text"]:focus, input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
 textarea:focus {
   box-shadow: 0 0 8px #188c44;
   border: 2px solid transparent;
@@ -325,9 +334,9 @@ input[type="button"]:focus {
   position: relative;
 }
 
-label{
-    float: left;
-    font-size: 30;
+label {
+  float: left;
+  font-size: 30;
 }
 
 /* FOOTER */
