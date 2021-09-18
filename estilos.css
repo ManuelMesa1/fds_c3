@@ -1,11 +1,17 @@
-/* NAVIGATION BAR */
-
 @import url(https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
 
-html,
+/* LOGO */
+img {
+  height: 60px;
+}
+
+/* NAVIGATION BAR */
+
 body {
   font-family: "Dosis";
   font-weight: 300;
+  margin: 0;
+  padding-top: 40px;
 }
 
 .header {
@@ -19,10 +25,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 32px;
-  font-weight: 100;
   padding: 26px;
-  border-right: 1px solid black;
 }
 
 .link {
@@ -48,137 +51,120 @@ body {
   transition: all 300ms;
 }
 
-.title:hover ~ .bar{
-    opacity: 1;
-    bottom: 5px;    
-}
-
-.title:hover {
-  /* .bar { */
-    
-  /* } */
+.title:hover ~ .bar {
+  opacity: 1;
+  bottom: 5px;
 }
 
 /* NAVIGATION BAR RESPONSIVENESS */
 
 @media screen and (max-width: 800px) {
-    .menu{
-        visibility: hidden;
-    }
+  .menu {
+    visibility: hidden;
   }
+  .logo {
+    right: 1%;
+  }
+}
 
-  /* MOBILE MENU */
+/* REGISTER BUTTON */
+#btn-registrar{
+    border: hidden;
+}
 
-#menuToggle
-{
+/* MOBILE MENU */
+
+#menuToggle {
   margin: 0;
   padding: 0;
   color: #cdcdcd;
   font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: relative;
   top: 50px;
   left: 50px;
-  
+
   z-index: 1;
-  
+
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
   color: #232323;
-  
+
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover {
   color: tomato;
 }
 
-
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
+
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
+
   -webkit-touch-callout: none;
 }
 
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
-  background: #cdcdcd;
+
+  background: #232323;
   border-radius: 3px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
+/* Transform all the slices of hamburger into a crossmark. */
+
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+/* Hide the middle one */
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+/* Last one should go the other direction */
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
@@ -186,27 +172,23 @@ body {
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
   position: absolute;
   width: 300px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
+
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
@@ -214,7 +196,150 @@ body {
 /*
  * And let's slide it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: none;
+}
+
+/* MOBILE MENÚ RESPONSIVE */
+
+@media screen and (min-width: 800px) {
+  #menuToggle {
+    visibility: hidden;
+  }
+}
+
+/* CENTER PIECE */
+
+.center_logo_div {
+  margin: auto;
+  width: 100%;
+  width: max-content;
+  height: max-content;
+}
+
+.center_logo {
+  height: 775px;
+  left: 50%;
+}
+
+/* CENTRAL PIECE RESPONSIVENESS */
+@media screen and (max-width: 1000px) {
+    .center_logo{
+        height: 680px;
+    }    
+}
+
+@media screen and (max-width: 800px) {
+    .center_logo{
+        height: 650px;
+    }    
+}
+
+@media screen and (max-width: 750px) {
+    .center_logo{
+        height: 550px;
+    }    
+}
+
+/* FORM */
+
+#main-container {
+  border: 2px solid #188c44;
+  background: #fafafa;
+  border-radius: 5px;
+  text-align: center;
+  height: 65%;
+  width: 60%;
+  max-width: 600px;
+  text-align: center;
+  padding: 20px 20px 70px 20px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0px 5px 0px #188c44;
+  -moz-box-shadow: 0px 5px 0px #188c44;
+  box-shadow: 0px 4px 0px #188c44;
+}
+#form-registro {
+  max-width: 500px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 4em;
+}
+
+/**************************
+  -------INPUT STYLING-------
+  ***************************/
+input[type="text"], input[type="password"],
+textarea {
+  display: block;
+  outline: none;
+  width: 96%;
+  padding: 5px;
+  margin-top: 10px;
+  border: 2px solid #188c44;
+  border-radius: 5px;
+  font-size: 1.5em;
+  transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+input[type="text"]:focus, input[type="password"]:focus,
+textarea:focus {
+  box-shadow: 0 0 8px #188c44;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  font-size: 1.55em;
+}
+#btn-submit-form {
+  position: relative;
+  display: block;
+  padding: 15px 15px;
+  background: #2abb9b;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: #092922;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-shadow: 0px 5px 0px #188c44;
+  -moz-box-shadow: 0px 5px 0px #188c44;
+  box-shadow: 0px 5px 0px #188c44;
+}
+#btn-submit-form:hover {
+  color: #fff;
+  transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+input[type="button"]:active {
+  top: 5px;
+}
+input[type="button"]:focus {
+  position: relative;
+}
+
+label{
+    float: left;
+    font-size: 30;
+}
+
+/* FOOTER */
+
+#footer {
+  background-color: #188c44;
+  height: 60px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  line-height: 50px;
+  color: white;
+  text-align: center;
+  width: 100%;
 }

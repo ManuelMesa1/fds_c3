@@ -1,11 +1,82 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
     <title>Registro</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <nav role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="index.html"><li>INICIO</li></a>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- NAVIAGTION BAR DESKTOP -->
+    <div class="header">
+      <div class="logo">
+        <img src="assets/img_somos_futbol/LOGO 1.png" alt="" />
+      </div>
+      <div class="menu">
+        <!-- <a href="#" class="link"> -->
+        <!-- <div class="title">About</div> -->
+        <!-- <div class="bar"></div> -->
+        <!-- </a> -->
+        <a href="index.html" class="link">
+          <div class="title">INICIO</div>
+          <div class="bar"></div>
+        </a>
+        <!-- <a href="#" class="link">
+            <div class="title">Contact</div>
+            <div class="bar"></div>
+          </a> -->
+      </div>
+    </div>
+
+    <!-- FORM -->
+
+        <div id="main-container">
+          <h1>Haz parte de esta comunidad!</h1>
+          <form id="form-registro">
+            <!-- Username Field -->
+            <label id="username">Username</label>
+            <input type="text" placeholder=""/>
+      
+            <!-- Email Field -->
+            <label id="correo">Correo</label>
+            <input type="text" placeholder=""/>
+
+            <!-- Password -->
+            <label id="contrasena">Constraseña</label>
+            <input type="password" placeholder=""/>
+
+            <!-- Confirm Password -->
+            <label id="confirmarContrasena">Confirmar Contraseña</label>
+            <input type="password" placeholder=""/>
+      
+            <!-- Submit Button -->
+            <input id="btn-submit-form" type="button" value="Enviar"/>
+          </form>
+        </div>
+      </body>
+
+
+    <div id="footer">
+      SOMOS FUTBOL
+      <div>
+        <!-- <a href="">
+            <img src="" alt="" />
+          </a> -->
+      </div>
+    </div>
+  </body>
 </html>
